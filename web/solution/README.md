@@ -45,6 +45,11 @@ int_payload => 108, 115, 32, 45, 97, 108
 
 ![gd_1](./images/gd_1.png)
 
+從可洩漏 `.git` 的網站抓取原始碼的工具：
+
+https://github.com/BugScanTeam/GitHack
+https://github.com/denny0223/scrabble
+
 ### Code review
 透過 Code review 可以知道
 
