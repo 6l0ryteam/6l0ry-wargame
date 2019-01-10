@@ -48,6 +48,7 @@ int_payload => 108, 115, 32, 45, 97, 108
 從可洩漏 `.git` 的網站抓取原始碼的工具：
 
 https://github.com/BugScanTeam/GitHack
+
 https://github.com/denny0223/scrabble
 
 ### Code review
