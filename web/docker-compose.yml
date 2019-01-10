@@ -1,0 +1,27 @@
+version: '2'
+services:
+  poop:
+    build: ./poop/
+    volumes:
+      - ./poop/www:/var/www/html
+    ports:
+      - "5001:80"
+  cmdinj:
+    build: ./cmdinj/
+    volumes:
+      - ./cmdinj/www:/var/www/html
+    ports:
+      - "5002:80"
+  lfi_rce:
+    build: ./lfi_rce/
+    volumes:
+      - ./lfi_rce/www:/var/www/html
+    ports:
+      - "5003:80"
+  geegle:
+    build: ./gd/
+    volumes:
+      - ./gd/www:/var/www/html
+    ports:
+      - "5004:80"
+
