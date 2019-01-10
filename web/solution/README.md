@@ -3,6 +3,7 @@ Web Solution
 ## poop
 ### chr()
 [chr() manual](https://secure.php.net/manual/en/function.chr.php)
+
 其中重點是 `Values outside the valid range (0..255) will be bitwise and'ed with 255`
 
 ### 傳入 array
