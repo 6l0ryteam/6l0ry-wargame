@@ -42,6 +42,7 @@ int_payload => 108, 115, 32, 45, 97, 108
 
 ### .git 洩漏
 打 CTF 需要的不只是攻擊手法，有時更需要一些情報搜集的能力，我當初是想放 `robots.txt` 去提示，但是想到在 realcase 或是 CTF 比賽都沒有提示的，所以最後並沒有改。
+
 ![gd_1](./images/gd_1.png)
 
 ### Code review
