@@ -9,8 +9,7 @@ Web Solution
 
 php 可以利用 `$domain/?a[]=1&a[]=2` 傳入 array
 `var_dump` 結果如下
-```
-php
+```php
 array(2) { [0]=> string(1) "1" [1]=> string(1) "2" }
 ```
 
@@ -27,7 +26,7 @@ int_payload => 108, 115, 32, 45, 97, 108
 [Payload](./poop.py)
 
 ## cmdinj
-### 利用 ``` 即可進行注入
+### 利用反引號即可進行注入
 ![cmdinj_1](./images/cmdinj_1.png)
 ![cmdinj_2](./images/cmdinj_2.png)
 最後即可讀取 flag
@@ -50,17 +49,20 @@ int_payload => 108, 115, 32, 45, 97, 108
 
 #### LFI
 `index.php` 存在 LFI
-(index_code)
+
+https://github.com/6l0ryteam/6l0ry-wargame/blob/72b27ce5133bd065501a2570d09860807fabc87e/web/gd/www/index.php#L13
 
 #### sandbox
-`head.php` 得知 sandbox 位於 `/sandbox/`md5('gd'+<yourip>)`
-(head_code)
+`head.php` 得知 sandbox 位於 `/sandbox/md5("gd"+{ip})`
+
+https://github.com/6l0ryteam/6l0ry-wargame/blob/72b27ce5133bd065501a2570d09860807fabc87e/web/gd/www/head.php#L3
 
 #### Unrestricted upload
 `uploadf.php` 並沒有檢查副檔名
-(uploadf_code)
 
-綜合以上四點，可以上傳 shell
+https://github.com/6l0ryteam/6l0ry-wargame/blob/72b27ce5133bd065501a2570d09860807fabc87e/web/gd/www/uploadf.php#L11
+
+綜合以上三點，可以上傳 shell
 ![gd_2](./images/gd_2.png)
 
 但是 flag 並不是 ascii，利用 `file` 指令探查 flag 格式
